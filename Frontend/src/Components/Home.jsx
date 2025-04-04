@@ -5,6 +5,8 @@ import { Base_url } from "../Constant/constant";
 import Hero from "./Hero";
 import Testimonials from "./Testimonials";
 import CoffeeInfo from "./CoffeeInfo";
+import SpecialOffers from "./SpecialOffer";
+import ContactLocation from "./ContactLocation";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -26,50 +28,7 @@ const Home = () => {
   };
   return (
     <>
-      {/* <div>
-        <div>
-          <Hero />
-          <Link to="/create">Add New</Link>
-        </div>
-        <table className="table">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((item) => (
-              <tr key={item.id}>
-                <td>{item.id}</td>
-                <td>{item.name}</td>
-                <td>{item.price}</td>
-                <td className=" flex gap-2">
-                  <Link
-                    to={`/read/${item.id}`}
-                    className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
-                  >
-                    Read
-                  </Link>
-                  <Link
-                    to={`/edit/${item.id}`}
-                    className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-700"
-                  >
-                    Edit
-                  </Link>
-                  <button
-                    onClick={() => handleDelete(item.id)}
-                    className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700"
-                  >
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div> */}
+      
       <div className="min-h-screen bg-gray-900 text-white p-8">
         <div className="max-w-6xl mx-auto">
           {/* Hero Section */}
@@ -125,8 +84,10 @@ const Home = () => {
               Add New
             </Link>
           </div>
+          <SpecialOffers />
           <CoffeeInfo />
           <Testimonials />
+          <ContactLocation />
         </div>
       </div>
     </>
