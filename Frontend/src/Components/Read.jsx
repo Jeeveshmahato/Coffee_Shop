@@ -24,6 +24,7 @@ const Read = () => {
             <>
               <h2 className="card-title">{coffee[0].name}</h2>
               <p>{coffee[0].price}</p>
+              <img src={coffee[0].image_url} alt="" />
 
               <div className="card-actions justify-end">
                 <Link to="/" className="btn btn-primary">
